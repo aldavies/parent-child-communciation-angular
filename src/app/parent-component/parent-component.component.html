@@ -1,4 +1,4 @@
 <p>
   {{ parentMessage }}
 </p>
-<app-child-component [stuffFromParent]="childMessage"></app-child-component>
+<app-child-component [stuffFromParent]="childMessage" (change)="childClicked($event)"></app-child-component>

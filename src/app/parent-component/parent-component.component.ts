@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parent-component',
@@ -13,5 +13,7 @@ export class ParentComponentComponent implements OnInit {
   
   ngOnInit() {
   }
-
+  childClicked(dataFromChild) {
+    console.log('Data from child: ', dataFromChild);
+  }
 }

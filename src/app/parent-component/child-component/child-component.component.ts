@@ -7,9 +7,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponentComponent implements OnInit {
   @Input() stuffFromParent: string;
+  @Output() change = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.change.emit(this.stuffFromParent);
+    console.log(this.stuffFromParent);
   }
 
 }
